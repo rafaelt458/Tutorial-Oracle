@@ -1,0 +1,3 @@
+- Hola soy Rafa
+- Voy a usar este sitio para compartir el código fuente de los ejemplos que desarrollemos en el Laboratorio de Rafa
+- https://www.youtube.com/channel/UClNUPrsTxxVwkg8owIEy2xQ
