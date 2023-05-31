@@ -1,0 +1,164 @@
+-- Generado por Oracle SQL Developer Data Modeler 22.2.0.165.1149
+--   en:        2023-05-24 20:22:07 CEST
+--   sitio:      Oracle Database 11g
+--   tipo:      Oracle Database 11g
+
+
+
+-- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+
+-- predefined type, no DDL - XMLTYPE
+
+CREATE TABLE clientes (
+    idcliente          NUMBER NOT NULL,
+    nombre             VARCHAR2(60 CHAR) NOT NULL,
+    tipodocumento      CHAR(1 CHAR),
+    nrodocumento       VARCHAR2(20 CHAR),
+    telefono           VARCHAR2(25 CHAR),
+    direccion          VARCHAR2(200 CHAR),
+    nrocompras         NUMBER DEFAULT 0 NOT NULL,
+    montocompras       NUMBER(10, 2) DEFAULT 0 NOT NULL,
+    fecharegistro      DATE DEFAULT sysdate NOT NULL,
+    ultimacompra       DATE,
+    ultimamodificacion DATE DEFAULT sysdate
+);
+
+COMMENT ON COLUMN clientes.idcliente IS
+    'Código del cliente';
+
+COMMENT ON COLUMN clientes.tipodocumento IS
+    'El tipo de documento debe ser uno de los siguientes tipos:
+1- DNI
+2- NIE
+3- Pasaporte';
+
+COMMENT ON COLUMN clientes.nrocompras IS
+    'Es el número de compras realizadas por el cliente. Se debe inicializar en 0 en el momento de la creación.';
+
+COMMENT ON COLUMN clientes.montocompras IS
+    'Monto total de las compras realizadas por el cliente. Se inicializa en 0 al momento de la creación.';
+
+COMMENT ON COLUMN clientes.fecharegistro IS
+    'Fecha de creación del cliente. Se inicializa con la fecha del día de creación.';
+
+COMMENT ON COLUMN clientes.ultimamodificacion IS
+    'Fecha de última modificación del cliente. Se inicializa con la fecha del día de creación.';
+
+ALTER TABLE clientes ADD CONSTRAINT clientes_pk PRIMARY KEY ( idcliente );
+
+CREATE TABLE factura (
+    idfactura     NUMBER NOT NULL,
+    idcliente     NUMBER NOT NULL,
+    numerofactura VARCHAR2(20 CHAR) NOT NULL,
+    montobruto    NUMBER(10, 2) NOT NULL,
+    descuento     NUMBER(10, 2) NOT NULL,
+    impuesto      NUMBER(10, 2) NOT NULL,
+    montoneto     NUMBER(10, 2) NOT NULL,
+    fechaventa    DATE NOT NULL,
+    anulada       CHAR(1) NOT NULL
+);
+
+COMMENT ON COLUMN factura.fechaventa IS
+    'Se inicializa con la fecha del día';
+
+COMMENT ON COLUMN factura.anulada IS
+    '0 representa Anulada
+1 representa válida';
+
+ALTER TABLE factura ADD CONSTRAINT factura_pk PRIMARY KEY ( idfactura );
+
+CREATE TABLE lineafactura (
+    idlineafactura    NUMBER NOT NULL,
+    cantidad          NUMBER(5) NOT NULL,
+    precionormal      NUMBER(10, 2) NOT NULL,
+    descuento         NUMBER(10, 2) NOT NULL,
+    impuesto          NUMBER(10, 2) NOT NULL,
+    tasaimpuesto      NUMBER(5, 2) NOT NULL,
+    precioaplicado    NUMBER(10, 2) NOT NULL,
+    factura_idfactura NUMBER NOT NULL
+);
+
+ALTER TABLE lineafactura ADD CONSTRAINT lineafactura_pk PRIMARY KEY ( idlineafactura );
+
+CREATE TABLE producto (
+    idproducto                  NUMBER NOT NULL,
+    descripcioncorta            VARCHAR2(120 CHAR) NOT NULL,
+    descripcionlarga            VARCHAR2(500 CHAR),
+    inventario                  NUMBER(5) NOT NULL,
+    preciocompra                NUMBER(10, 2) NOT NULL,
+    precioventa                 NUMBER(10, 2) NOT NULL,
+    tasaimpuesto                NUMBER(5, 2) NOT NULL,
+    descuento                   NUMBER(5, 2) NOT NULL,
+    unidadesvendidas            NUMBER DEFAULT 0 NOT NULL,
+    montovendido                NUMBER(20, 2) DEFAULT 0 NOT NULL,
+    fechacreacion               DATE DEFAULT sysdate NOT NULL,
+    ultimaventa                 DATE,
+    ultimamodificacion          DATE DEFAULT sysdate NOT NULL,
+    lineafactura_idlineafactura NUMBER NOT NULL
+);
+
+COMMENT ON COLUMN producto.unidadesvendidas IS
+    'Se inicializa en cero';
+
+COMMENT ON COLUMN producto.montovendido IS
+    'Se inicializa en cero';
+
+COMMENT ON COLUMN producto.fechacreacion IS
+    'Se inicializa con la fecha del día';
+
+COMMENT ON COLUMN producto.ultimamodificacion IS
+    'Se inicializa con la fecha del día';
+
+ALTER TABLE producto ADD CONSTRAINT producto_pk PRIMARY KEY ( idproducto );
+
+ALTER TABLE factura
+    ADD CONSTRAINT factura_clientes_fk FOREIGN KEY ( idcliente )
+        REFERENCES clientes ( idcliente );
+
+ALTER TABLE lineafactura
+    ADD CONSTRAINT lineafactura_factura_fk FOREIGN KEY ( factura_idfactura )
+        REFERENCES factura ( idfactura );
+
+ALTER TABLE producto
+    ADD CONSTRAINT producto_lineafactura_fk FOREIGN KEY ( lineafactura_idlineafactura )
+        REFERENCES lineafactura ( idlineafactura );
+
+CREATE SEQUENCE clientes_idcliente_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER clientes_idcliente_trg BEFORE
+    INSERT ON clientes
+    FOR EACH ROW
+    WHEN ( new.idcliente IS NULL )
+BEGIN
+    :new.idcliente := clientes_idcliente_seq.nextval;
+END;
+
+CREATE SEQUENCE factura_idfactura_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER factura_idfactura_trg BEFORE
+    INSERT ON factura
+    FOR EACH ROW
+    WHEN ( new.idfactura IS NULL )
+BEGIN
+    :new.idfactura := factura_idfactura_seq.nextval;
+END;
+
+CREATE SEQUENCE lineafactura_idlineafactura START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER lineafactura_idlineafactura BEFORE
+    INSERT ON lineafactura
+    FOR EACH ROW
+    WHEN ( new.idlineafactura IS NULL )
+BEGIN
+    :new.idlineafactura := lineafactura_idlineafactura.nextval;
+END;
+
+CREATE SEQUENCE producto_idproducto_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER producto_idproducto_trg BEFORE
+    INSERT ON producto
+    FOR EACH ROW
+    WHEN ( new.idproducto IS NULL )
+BEGIN
+    :new.idproducto := producto_idproducto_seq.nextval;
+END;

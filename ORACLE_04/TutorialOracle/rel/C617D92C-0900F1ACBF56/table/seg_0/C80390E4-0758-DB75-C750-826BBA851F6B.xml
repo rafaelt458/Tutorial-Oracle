@@ -1,0 +1,163 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C80390E4-0758-DB75-C750-826BBA851F6B" name="Clientes">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:31:38 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCliente" id="A048D4F1-798F-CC49-A94B-A83C54BE066A">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Código del cliente]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="A375E506-9B78-A876-5A88-285C464228EB">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<ownDataTypeParameters>60 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipoDocumento" id="BB840657-11A4-631F-6569-10E1453C3354">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[El tipo de documento debe ser uno de los siguientes tipos:
+1- DNI
+2- NIE
+3- Pasaporte]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NroDocumento" id="3D5CBE4B-98FD-97EC-F4C7-C2371F7BBF8A">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Telefono" id="1A625821-CBB8-B748-46AD-FF2B8ACA5DC9">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Direccion" id="6CA231F2-2EC1-D109-F4C5-DE51FAD7989A">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 CHAR</dataTypeSize>
+<ownDataTypeParameters>200 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NroCompras" id="703A5738-E886-F487-7FEB-89643E8B2D69">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Es el número de compras realizadas por el cliente. Se debe inicializar en 0 en el momento de la creación.]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MontoCompras" id="C826C2C5-72B3-1606-A38B-ED6962335B74">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Monto total de las compras realizadas por el cliente. Se inicializa en 0 al momento de la creación.]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FechaRegistro" id="D8DCE995-C722-32C0-D507-A447AF8204C5">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de creación del cliente. Se inicializa con la fecha del día de creación.]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UltimaCompra" id="90CD18E8-0C21-C104-C6F1-3F640AF9F9C0">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UltimaModificacion" id="DE5CE333-734A-3CC0-5C98-7329516D4E3B">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha de última modificación del cliente. Se inicializa con la fecha del día de creación.]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2C971CE8-CF81-C60B-79DD-212CC21805D4" name="Clientes_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-09 17:39:17 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A048D4F1-798F-CC49-A94B-A83C54BE066A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
