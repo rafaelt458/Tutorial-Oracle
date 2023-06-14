@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA8BFC33-AC50-2C15-AC0A-C083727CA2BC" name="Factura">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:09:14 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idfactura" id="7BAC5DB2-FA74-F84B-34EE-9A06057C0B95">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:13:03 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="idCliente" id="FCCE7C93-6F0D-FEA5-C775-632E8F031262">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:14:40 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7C6B491-0FA0-010D-D586-545E24989C76" referredColumn="A048D4F1-798F-CC49-A94B-A83C54BE066A"/>
+</associations>
+</Column>
+<Column name="NumeroFactura" id="AD600FEF-F080-93F5-8102-0D6879AA80AE">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:13:03 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MontoBruto" id="E95D7CF3-6447-88A8-1E4F-615D5F3FDC9B">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:13:03 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descuento" id="DD63F565-2D3A-D0CA-ACAB-006D020BA59D">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:13:03 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Impuesto" id="D551DB68-0334-5A35-CED1-E67028CB4C71">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:13:03 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MontoNeto" id="9942F95D-CF39-1535-B042-AA9FEED35622">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:13:03 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FechaVenta" id="8B1B68BE-6240-B7C8-5481-665465CC682E">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:13:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[Se inicializa con la fecha del día]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Anulada" id="B7E1D0D7-0860-90E8-5E95-0459AACC3F17">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:13:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[0 representa Anulada
+1 representa válida]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AB852A8D-D4A7-D841-A7D8-D6596762D5DD" name="Factura_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:13:03 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BAC5DB2-FA74-F84B-34EE-9A06057C0B95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1EA42D30-78F7-4D8B-42AA-69C591EA0861" name="UN_NRO_FACTURA">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-06-09 17:27:51 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD600FEF-F080-93F5-8102-0D6879AA80AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7AC9B11C-0532-6C3C-986C-754B47FA1C43" name="Factura_Clientes_FK">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:14:40 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCCE7C93-6F0D-FEA5-C775-632E8F031262"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CK_ANULADA" directorySegmentName="seg_0" id="889C53C7-F4F6-85E4-408F-A0FC7FCB5EDD">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-06-09 17:27:36 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<rule><![CDATA[Anulada in ('0', '1')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

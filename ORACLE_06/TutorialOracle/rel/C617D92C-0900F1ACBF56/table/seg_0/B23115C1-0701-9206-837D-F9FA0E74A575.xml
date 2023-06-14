@@ -1,0 +1,224 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B23115C1-0701-9206-837D-F9FA0E74A575" name="Producto">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:00:21 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idProducto" id="B27FC552-89B4-B30F-4E13-3CF42E7F2584">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DescripcionCorta" id="4E7979DA-D240-9A95-1F03-B58587330D02">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>120 CHAR</dataTypeSize>
+<ownDataTypeParameters>120 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DescripcionLarga" id="D5937F7E-8BE0-CA4B-1D40-CAF78CF2316C">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500 CHAR</dataTypeSize>
+<ownDataTypeParameters>500 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Inventario" id="B86F8AF2-D75E-AC67-A758-22A59FAF820A">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PrecioCompra" id="A7D937DC-F6D1-D262-BB93-7678891428D0">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PrecioVenta" id="E1FE9FE2-8FA5-B283-2C11-F4105507D9D3">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TasaImpuesto" id="FD1EA105-B0C0-8DAB-E10D-72BE15EF1D50">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descuento" id="69B9ED1F-3AD3-4708-1D73-CBEE3061553F">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UnidadesVendidas" id="8D543CEB-9FBE-EFCD-1F47-71E8B171F208">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Se inicializa en cero]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MontoVendido" id="F279DDCC-15C6-B6F2-9DE7-5D6486DCB0C1">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Se inicializa en cero]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,20,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FechaCreacion" id="EAE5642D-7114-2FB0-8848-26EE92AE0910">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Se inicializa con la fecha del día]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UltimaVenta" id="4187B0FE-6E48-8F48-59AC-7AA17765E6CC">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UltimaModificacion" id="1F4067F3-09BF-10EC-F104-FECE3382703D">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Se inicializa con la fecha del día]]></commentInRDBMS>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="032ADAE3-94D3-60E2-6593-42B6C206BEA1" name="Producto_PK">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-05-24 18:08:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B27FC552-89B4-B30F-4E13-3CF42E7F2584"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CK_INVENTARIO" directorySegmentName="seg_0" id="16189DC6-C9FE-17A1-CE15-C4B4B2057B47">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-06-09 17:28:56 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<rule><![CDATA[INVENTARIO >= 0]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_PRECIO_COMPRA" directorySegmentName="seg_0" id="29BA14C9-B9AE-A867-CA8A-2AF0E9860E0F">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-06-09 17:29:15 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<rule><![CDATA[PRECIOCOMPRA >= 0]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_PRECIO_VENTA" directorySegmentName="seg_0" id="63685629-3D41-8968-D5C7-5424146E22CF">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-06-09 17:29:37 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<rule><![CDATA[PRECIOVENTA >= 0]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_TASA_IMPUESTO" directorySegmentName="seg_0" id="97F076CD-BA89-7F60-2A9C-9800276FD4F4">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-06-09 17:30:01 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<rule><![CDATA[TASAIMPUESTO >= 0]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_DESCUENTO" directorySegmentName="seg_0" id="51F528F7-CEE7-B7DB-702F-5F827355EE8F">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-06-09 17:30:16 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<rule><![CDATA[DESCUENTO >= 0]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_UNIDADES_VENDIDAS" directorySegmentName="seg_0" id="935AFE62-158F-A700-CD90-7AECE2C3FA67">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-06-09 17:30:38 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<rule><![CDATA[UNIDADESVENDIDAS >= 0]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_MONTO_VENDIDO" directorySegmentName="seg_0" id="E804557F-3397-FDB1-E5DA-281491E14D69">
+<createdBy>Rafael</createdBy>
+<createdTime>2023-06-09 17:30:59 UTC</createdTime>
+<ownerDesignName>TutorialOracle</ownerDesignName>
+<rule><![CDATA[MONTOVENDIDO >= 0]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>
